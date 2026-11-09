@@ -1,0 +1,542 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minha História | Geovana dos Santos Silva</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff7fb;
+    color: #493344;
+}
+
+/* MENU */
+header {
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    box-shadow: 0 3px 15px #00000010;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    color: #d45b99;
+}
+
+nav a {
+    text-decoration: none;
+    color: #63445a;
+    margin-left: 25px;
+    font-size: 14px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #d45b99;
+}
+
+/* INÍCIO */
+.inicio {
+    min-height: 570px;
+    padding: 90px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #f8c8df, #e9d4fa, #fff0f7);
+}
+
+.inicio-conteudo {
+    max-width: 850px;
+}
+
+.inicio h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 55px;
+    color: #923f76;
+    margin-bottom: 15px;
+}
+
+.inicio h2 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #714568;
+    margin-bottom: 25px;
+}
+
+.inicio p {
+    font-size: 17px;
+    line-height: 1.9;
+    color: #694b61;
+}
+
+.botao {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 32px;
+    border-radius: 30px;
+    background: #c95791;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.botao:hover {
+    background: #923f76;
+    transform: translateY(-4px);
+}
+
+/* SEÇÕES */
+section {
+    padding: 80px 8%;
+}
+
+.titulo {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.titulo h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 37px;
+    color: #a94e84;
+}
+
+.titulo p {
+    color: #94798d;
+    margin-top: 10px;
+}
+
+/* CARTÕES */
+.cartoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px #a94e8415;
+    transition: .3s;
+    border: 1px solid #f5dbea;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px #a94e8425;
+}
+
+.icone {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #a94e84;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.9;
+    color: #725c6d;
+}
+
+/* SOBRE */
+.sobre {
+    background: #fff0f7;
+}
+
+.sobre-conteudo {
+    max-width: 850px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px #a94e8415;
+    text-align: center;
+}
+
+.sobre-conteudo p {
+    font-size: 15px;
+    line-height: 2;
+}
+
+/* MOTO */
+.moto {
+    background: linear-gradient(135deg, #f5d5e8, #f0e2fa);
+}
+
+.moto-conteudo {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    padding: 40px;
+    background: white;
+    border-radius: 25px;
+}
+
+.moto-conteudo h3 {
+    font-size: 25px;
+    color: #a94e84;
+    margin-bottom: 20px;
+}
+
+.moto-conteudo p {
+    line-height: 2;
+}
+
+/* SONHOS */
+.sonhos {
+    text-align: center;
+}
+
+.sonhos-box {
+    max-width: 750px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #f8d5e8, #eadbfa);
+}
+
+.sonhos-box h3 {
+    font-family: 'Playfair Display', serif;
+    color: #923f76;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.sonhos-box p {
+    line-height: 2;
+}
+
+/* FRASE */
+.frase {
+    padding: 80px 10%;
+    text-align: center;
+    background: #a94e84;
+    color: white;
+}
+
+.frase h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.frase p {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* RODAPÉ */
+footer {
+    text-align: center;
+    background: #482c43;
+    color: white;
+    padding: 30px;
+    font-size: 13px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+/* CELULAR */
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 12px;
+    }
+
+    .inicio h1 {
+        font-size: 38px;
+    }
+
+    .inicio h2 {
+        font-size: 17px;
+    }
+
+    .titulo h2 {
+        font-size: 29px;
+    }
+
+    section {
+        padding: 55px 6%;
+    }
+
+    .sobre-conteudo,
+    .moto-conteudo,
+    .sonhos-box {
+        padding: 25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">💗 Geovana</div>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#historia">Minha história</a>
+        <a href="#sobre">Quem sou eu</a>
+        <a href="#paixoes">Paixões</a>
+        <a href="#sonhos">Meus sonhos</a>
+    </nav>
+</header>
+
+<div class="inicio" id="inicio">
+    <div class="inicio-conteudo">
+        <h1>Geovana dos Santos Silva</h1>
+        <h2>Minha História, Minhas Paixões e Meus Sonhos ✨</h2>
+
+        <p>
+            "Com o coração cheio de sonhos e as raízes firmadas
+            em Rosário do Ivaí, a liberdade sobre duas rodas e
+            o amor guiam o meu caminho."
+        </p>
+
+        <a href="#historia" class="botao">Conheça minha história 💕</a>
+    </div>
+</div>
+
+<section id="historia">
+    <div class="titulo">
+        <h2>✨ O Início de Tudo</h2>
+        <p>Onde minha história começou</p>
+    </div>
+
+    <div class="sobre-conteudo">
+        <div class="icone">🌷</div>
+
+        <p>
+            Minha história começou em <strong>12 de maio de 2010</strong>,
+            na cidade de Rosário do Ivaí, no Paraná.
+
+            Minha infância foi marcada por momentos felizes,
+            brincadeiras e o carinho incondicional da minha família,
+            que sempre foi a base mais importante da minha vida.
+
+            Cada lembrança faz parte de quem sou hoje e contribui
+            para a pessoa que estou me tornando.
+        </p>
+    </div>
+</section>
+
+<section class="sobre" id="sobre">
+    <div class="titulo">
+        <h2>🌸 Quem Sou Eu Hoje</h2>
+        <p>Um pouquinho sobre minha personalidade</p>
+    </div>
+
+    <div class="cartoes">
+
+        <div class="card">
+            <div class="icone">😊</div>
+            <h3>Minha personalidade</h3>
+            <p>
+                Sou uma jovem decidida, alegre e cheia de energia.
+                Gosto de aprender coisas novas e aproveitar cada
+                momento da vida.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icone">📚</div>
+            <h3>Meus estudos</h3>
+            <p>
+                Atualmente tenho 16 anos e estou cursando a
+                1ª série do Ensino Médio, construindo meus
+                conhecimentos e meu futuro.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icone">❤️</div>
+            <h3>Meu coração</h3>
+            <p>
+                Minha família é muito importante para mim.
+                Sou companheira, leal e gosto de demonstrar
+                carinho pelas pessoas que amo.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icone">🍰</div>
+            <h3>Meu talento na cozinha</h3>
+            <p>
+                Adoro preparar receitas especiais para as pessoas
+                que amo. Para mim, cozinhar também é uma forma
+                de demonstrar carinho.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="paixoes">
+    <div class="titulo">
+        <h2>🏍️ Estilo de Vida e Paixões</h2>
+        <p>As coisas que fazem meus dias mais felizes</p>
+    </div>
+
+    <div class="cartoes">
+
+        <div class="card">
+            <div class="icone">🏍️</div>
+            <h3>Paixão por motos</h3>
+            <p>
+                Uma das minhas maiores paixões é andar de moto.
+                Minha Titan 125 representa uma sensação especial
+                de liberdade e alegria.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icone">🎵</div>
+            <h3>Música sertaneja</h3>
+            <p>
+                Adoro ouvir um bom sertanejo, cantar minhas
+                músicas favoritas e aproveitar cada momento.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icone">🎬</div>
+            <h3>Filmes</h3>
+            <p>
+                Gosto de maratonar filmes de ação e comédia.
+                São ótimas opções para relaxar e me divertir.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icone">📱</div>
+            <h3>TikTok</h3>
+            <p>
+                Também gosto de acompanhar as novidades,
+                tendências e vídeos divertidos do TikTok.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icone">🙏</div>
+            <h3>Minha fé</h3>
+            <p>
+                A igreja faz parte da minha vida e é um lugar
+                onde posso renovar minha fé, encontrar paz
+                e fortalecer minha espiritualidade.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<div class="moto">
+    <div class="titulo">
+        <h2>🏍️ Liberdade Sobre Duas Rodas</h2>
+        <p>Uma paixão que faz meu coração acelerar</p>
+    </div>
+
+    <div class="moto-conteudo">
+        <div class="icone">🏍️💨</div>
+
+        <h3>Minha Titan 125</h3>
+
+        <p>
+            Existe uma sensação especial em estar sobre duas rodas.
+            A paixão por motos faz parte de mim e representa
+            liberdade, emoção e momentos inesquecíveis.
+
+            Minha Titan 125 é uma das coisas que representam
+            esse amor pelo mundo das motocicletas.
+        </p>
+    </div>
+</div>
+
+<section class="sonhos" id="sonhos">
+    <div class="titulo">
+        <h2>🌟 Meus Sonhos e Meu Futuro</h2>
+        <p>O futuro é uma história que ainda estou escrevendo</p>
+    </div>
+
+    <div class="sonhos-box">
+        <div class="icone">💖✨</div>
+
+        <h3>Sonhar, acreditar e conquistar!</h3>
+
+        <p>
+            Tenho muitos sonhos e objetivos para realizar.
+            Quero continuar aprendendo, crescendo e aproveitando
+            as oportunidades que a vida me oferece.
+
+            Sei que cada experiência, cada desafio e cada conquista
+            fazem parte da minha caminhada.
+
+            Quero construir um futuro bonito, sem esquecer minhas
+            raízes, minha família, minha fé e tudo aquilo que
+            faz parte de quem eu sou.
+        </p>
+    </div>
+</section>
+
+<div class="frase">
+    <h2>💗 Essa sou eu, Geovana!</h2>
+
+    <p>
+        Uma menina cheia de sonhos, apaixonada pela vida,
+        pela família e pela liberdade de ser quem realmente sou.
+
+        <br><br>
+
+        Minha história está apenas começando...
+        e ainda tenho muitos caminhos para percorrer! ✨
+    </p>
+</div>
+
+<footer>
+    <p>💗 Feito com carinho para Geovana dos Santos Silva</p>
+    <p>Rosário do Ivaí - Paraná</p>
+    <p>© 2026 - Minha História, Minhas Paixões e Meus Sonhos</p>
+</footer>
+
+</body>
+</html>
